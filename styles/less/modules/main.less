@@ -1,0 +1,71 @@
+main{
+    h1, p.center{
+        text-align: center;
+    }
+    .graphic-container,.text-container{
+        .well{
+            background-color: @white;
+        }
+    }
+    
+    .text-container{
+        .well{
+            .text-line{
+                padding-left: 5px;
+                &:hover,&:focus{
+                    background-color: @black;
+                    color:@white;
+                }
+            }
+            .text-line:first-child{
+                font-size: 20px;
+                font-weight: 900;
+                display: block;
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+            .text-line:nth-child(2){
+                font-style: italic;
+                font-weight: 700;
+                width: 100%;
+                 display: block;
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+            .text-line:nth-child(3){
+                padding-left: 0;
+            }
+        }
+    }
+    .graphic-container{
+        .well{
+            img{
+                height: 100px; 
+            } 
+            p{
+                margin: 10px 0;
+                color:@white;
+                font-weight: 700;
+            }
+        }
+        .angry{
+            background-color: red;
+            
+        }
+        .sad{
+            background-color:aqua;
+        }
+        .joy{
+            background-color:forestgreen;
+        }
+        .fear{
+            background-color: cadetblue;
+        }
+        .disgust{
+            background-color: darkgoldenrod;
+        }
+    }
+
+}

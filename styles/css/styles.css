@@ -36,12 +36,15 @@ body {
   display: none !important;
 }
 .navbar {
-  background-color: #fff;
+  background-color: #222323;
   margin: 0 2px 20px 4px;
   border: 1px solid #9D9D9D;
 }
 .navbar .navbar-brand {
   height: auto;
+}
+.navbar .navbar-brand > img {
+  height: 40px;
 }
 .navbar button.close {
   margin-top: 22px;
@@ -55,12 +58,12 @@ footer {
   background-color: #222323;
   width: 100%;
   color: #eee;
-  padding: 20px 0 40px;
+  padding: 10px 0 15px;
   text-align: center;
 }
 footer .nav-pills {
   margin: 0 auto;
-  width: 600px;
+  width: 280px;
 }
 footer .nav-pills > li {
   margin: 0;
@@ -79,7 +82,15 @@ footer .nav-pills > li > a:focus {
 footer .nav-pills li:last-child {
   border-right-width: 0;
 }
+@media all and (max-width: 1204px) {
+  footer {
+    position: relative;
+  }
+}
 @media all and (max-width: 699px) {
+  footer {
+    position: relative;
+  }
   footer .nav-pills {
     float: left;
     margin: 0 auto;
@@ -89,44 +100,61 @@ footer .nav-pills li:last-child {
     margin: 10px;
   }
 }
-main .form-inline .form-control {
+main h1,
+main p.center {
+  text-align: center;
+}
+main .graphic-container .well,
+main .text-container .well {
+  background-color: #fff;
+}
+main .text-container .well .text-line {
+  padding-left: 5px;
+}
+main .text-container .well .text-line:hover,
+main .text-container .well .text-line:focus {
+  background-color: #222323;
+  color: #fff;
+}
+main .text-container .well .text-line:first-child {
+  font-size: 20px;
+  font-weight: 900;
+  display: block;
   width: 100%;
-  padding: 20px 40px 20px 15px;
+  padding-left: 0;
+  text-align: center;
 }
-main .form-inline .right-inner-addon {
-  position: relative;
+main .text-container .well .text-line:nth-child(2) {
+  font-style: italic;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  text-align: center;
 }
-main .form-inline .right-inner-addon input {
-  padding-right: 30px;
-}
-main .form-inline .right-inner-addon button {
-  position: absolute;
-  right: 0px;
-  padding: 11px 12px;
-  background-color: transparent;
-  border-width: 0;
-}
-main ul {
+main .text-container .well .text-line:nth-child(3) {
   padding-left: 0;
 }
-main ul li {
-  list-style-type: none;
-  margin-top: 20px;
+main .graphic-container .well img {
+  height: 100px;
 }
-main ul li a {
-  text-decoration: underline;
+main .graphic-container .well p {
+  margin: 10px 0;
+  color: #fff;
+  font-weight: 700;
 }
-main ul li a:hover,
-main ul li a:focus {
-  text-decoration: none;
+main .graphic-container .angry {
+  background-color: red;
 }
-main .no-result {
-  padding: 10px 20px 5px;
-  margin: 20px 60px;
-  border: 1px solid #9D9D9D;
-  border-radius: px;
+main .graphic-container .sad {
+  background-color: aqua;
 }
-main .no-result p {
-  text-align: center;
-  color: #777;
+main .graphic-container .joy {
+  background-color: forestgreen;
+}
+main .graphic-container .fear {
+  background-color: cadetblue;
+}
+main .graphic-container .disgust {
+  background-color: darkgoldenrod;
 }

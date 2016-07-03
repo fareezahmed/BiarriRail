@@ -5,11 +5,11 @@ footer{
     background-color: @black;
     width: 100%;
     color:@footer-color;
-    padding: 20px 0 40px;
+    padding: 10px 0 15px;
     text-align: center;
     .nav-pills{
         margin: 0 auto;
-        width: 200px;
+        width: 280px;
         >li{
             margin: 0;
             border-right: 1px solid @grey;
@@ -30,9 +30,14 @@ footer{
     }
 }
 
-
+@media all and (max-width: 1204px) {
+     footer {
+        position: relative;
+    }
+}
 @media all and (max-width: 699px) {
     footer {
+        position: relative;
         .nav-pills{
             float: left;
             margin: 0 auto;

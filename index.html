@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="searchApp">
+<html lang="en" data-ng-app="EmotionApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Search List application; enables user to search and display list of results">
+    <meta name="description" content="AlchemyAPI’s Emotion Analysis of the Shakespeare’s play Henry IV.">
     <meta name="author" content="Fareez Ahmed">
     <link rel="icon" href="asserts/images/logo.ico">
 
-    <title>Search List - Adslot</title>
+    <title>Emotion Analysis : Henry IV</title>
 
     <!-- Bootstrap core CSS -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
     <![endif]-->
   </head>
 
-  <body data-ng-controller="searchCtrl">
+  <body>
 
     <!-- Navigation -->
     <nav class="navbar" role="navigation">
@@ -40,6 +40,45 @@
       
     <!-- Search Module -->
     <main class="container" >
+        <h1>Emotion Analysis : Henry IV </h1>
+        <p class="center">AlchemyAPI’s Emotion Analysis of the Shakespeare’s play Henry IV.</p>
+        <div class="graphic-container col-md-6 col-sm-12 col-xs-12">
+            <div class="well">
+                <h2>Emotion Analysis</h2>
+                <div class="col-md-4 col-sm-6 col-xs-12 well angry">
+                    <img src="asserts/images/angry.svg" alt="angry expression">
+                    <p>Angry: <span></span></p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 well disgust">
+                    <img src="asserts/images/disgust.svg" alt="Disgust expression">
+                    <p>Disgust: <span></span></p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 well fear">
+                    <img src="asserts/images/fear.svg" alt="Fear expression">
+                    <p>Fear: <span></span></p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 well joy">
+                    <img src="asserts/images/joy.svg" alt="Joy expression">
+                    <p>Joy: <span></span></p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 well sad">
+                    <img src="asserts/images/sad.svg" alt="Sadness expression">
+                    <p>Sadness: <span></span></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="text-container col-md-6 col-sm-12 col-xs-12" data-ng-controller="playTextCtrl">
+            <div class="well">
+                <h2>Henry IV</h2>
+                <p>Author: Shakespeare’s </p>
+                <p  data-ng-init="getPlayData()">
+                    <span class="text-line" data-ng-cloak data-ng-repeat="text in textData" ng-bind="text.text_entry" ng-attr-id="{{text.line_id}}" tabIndex="0"></span>
+                </p>
+            </div>
+            
+        </div>
+<!--
         <form class="form-inline" role="form" >
             <label class="control-label" for="searchPubliser">Publishers</label>
             <div class="right-inner-addon">
@@ -57,15 +96,14 @@
         <div data-ng-show="isEmpty" data-ng-cloak class="no-result">
             <p>We currently don't have any results for your search try another</p>
         </div>
+-->
 
     </main>
     
     <!-- Footer -->
     <footer>
         <div class="container">
-            <a class="brand" href="#">
-                <img src="asserts/images/footer-logo.png" alt="logo">
-            </a>
+                AlchemyAPI’s Emotion Analysis : Play Henry IV 
             <hr>
             <ul class="nav nav-pills">
                 <li><a href="#">© 2013 Fareez Ahmed.</a></li>
@@ -87,7 +125,7 @@
     <!-- Custom Angular JavaScript  -->
     <script src="js/app.js"></script>
     <script src="js/common/dataFactory.js"></script>
-    <script src="js/modules/search/searchController.js"></script>
+    <script src="js/modules/playText/playTextController.js"></script>
       
   </body>
 </html>

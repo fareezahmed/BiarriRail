@@ -1,92 +1,36 @@
 (function(){
     var dataFactory = function($http){
-            
-        var factory = {};
-        
-        var sites = [
-              {
-                "id": 1,
-                "siteName": "SurferMag",
-                "siteUrl": "www.surfermag.com",
-                "description": "This is the description for SurferMag",
-                "categoryIds": [
-                  2
-                ]
-              },
-              {
-                "id": 2,
-                "siteName": "Ebay",
-                "siteUrl": "www.ebay.com.au",
-                "description": "This is the description for ebay",
-                "categoryIds": [
-                  1
-                ]
-              },
-              {
-                "id": 3,
-                "siteName": "Robs UI Tips",
-                "siteUrl": "www.awesomeui.com.au",
-                "description": "This is the description for the best site in the world. It is the best:)",
-                "categoryIds": [
-                  4, 3
-                ]
-              },
-              {
-                "id": 4,
-                "siteName": "Table Tennis Tips - How to not come runners up",
-                "siteUrl": "www.ttt.com",
-                "description": "This is the description for Table Tennis Tips",
-                "categoryIds": [
-                  1, 2, 3, 4
-                 ]
-              }
-            ];
-            var categories = [
-              {
-                id: 1,
-                description: "Arts & Entertainment"
-              },
-              {
-                id: 2,
-                description: "Automotive"
-              },
-              {
-                id: 3,
-                description: "Business"
-              },
-              {
-                id: 4,
-                description: "Careers"
-              }
-            ];
-        
-        factory.getSites = function(keyword){
-          var data = [], siteIds = [], i, j;
-          for (i=0,len=categories.length;i<len;i++) {
-              if (categories[i].description.toUpperCase().indexOf(keyword.toUpperCase()) !== -1) {
-                 siteIds.push(categories[i]);
-              }
-          }    
-
-          for (i=0,len=sites.length;i<len;i++) {
-              if (sites[i].siteName.toUpperCase().indexOf(keyword.toUpperCase()) !== -1) {
-                 data.push(sites[i]);
-              }else{
-                  for(j=0,cnt=siteIds.length;j<cnt;j++){
-                      if(sites[i].categoryIds.indexOf(siteIds[j].id)){
-                          data.push(sites[i]);
-                      }
-                  }
-              }
+        var url = "http://gateway-a.watsonplatform.net/calls/text/TextGetEmotion";
+        var APIkey = "4d395301e1cf0abcae8548dfa07cfdad2b96f24c";
+        var confParam = "&outputMode=json&showSourceText=1&text=";
+         return {
+          getText: function(callback){
+            $http.get('asserts/docs/henry_iv.json').success(callback);
           }
+          getEmotions: function(callback, keyword){
 
-          return data;
+            $http.get('data/posts.json').
+            success(callback).
+            error(function(data, status, headers, config) {
+              console.log('error')
+            });
+         }
         };
-        return factory;        
     };
+            
     
     
     dataFactory.$inject = ['$http']
     
-    angular.module('searchApp').factory('dataFactory', dataFactory);
+    
+//    countryApp.factory('countries', function($http){
+//        return {
+//          list: function(callback){
+//            $http.get('countries.json').success(callback);
+//          }
+//        };
+//      });
+
+
+    angular.module('EmotionApp').factory('dataFactory', dataFactory);
 }());
