@@ -104,9 +104,14 @@ main h1,
 main p.center {
   text-align: center;
 }
-main .graphic-container .well,
-main .text-container .well {
+main .graphic-container .well.wrapper,
+main .text-container .well.wrapper {
   background-color: #fff;
+  height: 600px;
+}
+main .text-container .well {
+  height: 600px;
+  overflow-y: scroll;
 }
 main .text-container .well .text-line {
   padding-left: 5px;
@@ -135,26 +140,63 @@ main .text-container .well .text-line:nth-child(2) {
 main .text-container .well .text-line:nth-child(3) {
   padding-left: 0;
 }
+main .graphic-container .well {
+  text-align: center;
+  padding: 20px 5px;
+  background-color: #dad7d7;
+}
 main .graphic-container .well img {
   height: 100px;
+  padding: 10px;
+  border-radius: 10px;
 }
 main .graphic-container .well p {
   margin: 10px 0;
-  color: #fff;
+  color: #222323;
   font-weight: 700;
 }
-main .graphic-container .angry {
-  background-color: red;
+main .graphic-container .well .progress {
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
-main .graphic-container .sad {
-  background-color: aqua;
+main .graphic-container .well .progress-bar {
+  height: 12px;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
 }
-main .graphic-container .joy {
-  background-color: forestgreen;
+main .graphic-container .well .anger .progress-bar,
+main .graphic-container .well .anger img {
+  background-color: #9e0202;
 }
-main .graphic-container .fear {
+main .graphic-container .well .sad .progress-bar,
+main .graphic-container .well .sad img {
   background-color: cadetblue;
 }
-main .graphic-container .disgust {
+main .graphic-container .well .joy .progress-bar,
+main .graphic-container .well .joy img {
+  background-color: forestgreen;
+}
+main .graphic-container .well .fear .progress-bar,
+main .graphic-container .well .fear img {
+  background-color: orange;
+}
+main .graphic-container .well .disgust .progress-bar,
+main .graphic-container .well .disgust img {
   background-color: darkgoldenrod;
 }
