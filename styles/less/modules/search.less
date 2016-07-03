@@ -1,0 +1,44 @@
+main{
+    .form-inline{
+        .form-control {
+            width: 100%;
+            padding: 20px 40px 20px 15px;
+        }
+       .right-inner-addon {
+            position: relative;
+            input {
+                padding-right: 30px;    
+            }
+            button{
+                position: absolute;
+                right: 0px;
+                padding: 11px 12px;
+                background-color: transparent;
+                border-width: 0;
+            } 
+        }
+    }
+    ul{
+        padding-left:0;
+        li{
+            list-style-type: none;
+            margin-top: 20px;
+            a{
+                text-decoration: underline;
+                &:hover,&:focus{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .no-result{
+        padding: 10px 20px 5px;
+        margin: 20px 60px;
+        border: 1px solid @border-grey;
+        border-radius: px;
+        p{
+            text-align: center;
+            color: @dark-grey;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+body {
+  background-color: #eee;
+}
+.ng-enter {
+  -webkit-transitionn: 0.75s;
+  -moz-transitionn: 0.75s;
+  -o-transitionn: 0.75s;
+  transition: 0.75s;
+  opacity: 0;
+}
+.ng-enter-stagger {
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.ng-enter-active {
+  opacity: 1;
+}
+.ng-leave {
+  -webkit-transition: 0.75s;
+  -moz-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
+  opacity: 1;
+}
+.ng-leave-active {
+  opacity: 0;
+}
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+.navbar {
+  background-color: #fff;
+  margin: 0 2px 20px 4px;
+  border: 1px solid #9D9D9D;
+}
+.navbar .navbar-brand {
+  height: auto;
+}
+.navbar button.close {
+  margin-top: 22px;
+  padding: 2px 6px;
+  border: 2px solid #222323;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  min-height: 80px;
+  background-color: #222323;
+  width: 100%;
+  color: #eee;
+  padding: 20px 0 40px;
+  text-align: center;
+}
+footer .nav-pills {
+  margin: 0 auto;
+  width: 600px;
+}
+footer .nav-pills > li {
+  margin: 0;
+  border-right: 1px solid #eee;
+}
+footer .nav-pills > li > a {
+  color: #eee;
+  border-radius: 0;
+  padding: 0 5px;
+}
+footer .nav-pills > li > a:hover,
+footer .nav-pills > li > a:focus {
+  text-decoration: underline;
+  background-color: transparent;
+}
+footer .nav-pills li:last-child {
+  border-right-width: 0;
+}
+@media all and (max-width: 699px) {
+  footer .nav-pills {
+    float: left;
+    margin: 0 auto;
+    width: 96%;
+  }
+  footer .nav-pills > li {
+    margin: 10px;
+  }
+}
+main .form-inline .form-control {
+  width: 100%;
+  padding: 20px 40px 20px 15px;
+}
+main .form-inline .right-inner-addon {
+  position: relative;
+}
+main .form-inline .right-inner-addon input {
+  padding-right: 30px;
+}
+main .form-inline .right-inner-addon button {
+  position: absolute;
+  right: 0px;
+  padding: 11px 12px;
+  background-color: transparent;
+  border-width: 0;
+}
+main ul {
+  padding-left: 0;
+}
+main ul li {
+  list-style-type: none;
+  margin-top: 20px;
+}
+main ul li a {
+  text-decoration: underline;
+}
+main ul li a:hover,
+main ul li a:focus {
+  text-decoration: none;
+}
+main .no-result {
+  padding: 10px 20px 5px;
+  margin: 20px 60px;
+  border: 1px solid #9D9D9D;
+  border-radius: px;
+}
+main .no-result p {
+  text-align: center;
+  color: #777;
+}

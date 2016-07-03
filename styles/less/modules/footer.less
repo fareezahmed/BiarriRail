@@ -1,0 +1,45 @@
+footer{
+    position: fixed;
+    bottom: 0;
+    min-height: 80px;
+    background-color: @black;
+    width: 100%;
+    color:@footer-color;
+    padding: 20px 0 40px;
+    text-align: center;
+    .nav-pills{
+        margin: 0 auto;
+        width: 200px;
+        >li{
+            margin: 0;
+            border-right: 1px solid @grey;
+            >a{
+                color:@footer-color;
+                border-radius:0;
+                padding: 0 5px;
+                &:hover,&:focus{
+                    text-decoration: underline;
+                    background-color: transparent;
+                }
+            }
+        }
+        li:last-child{
+            border-right-width:0;   
+        }
+
+    }
+}
+
+
+@media all and (max-width: 699px) {
+    footer {
+        .nav-pills{
+            float: left;
+            margin: 0 auto;
+            width: 96%;
+            >li{
+                margin: 10px;
+            }
+        }
+    }
+}
