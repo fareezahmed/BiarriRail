@@ -1,6 +1,6 @@
 (function(){
     var dataFactory = function($http){
-        var url = "http://gateway-a.watsonplatform.net/calls/text/TextGetEmotion";
+        var url = "https://gateway-a.watsonplatform.net/calls/text/TextGetEmotion";
         var APIkey = "4d395301e1cf0abcae8548dfa07cfdad2b96f24c";
         var confParam = "&outputMode=json&showSourceText=1&text=";
          return {
