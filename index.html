@@ -73,7 +73,7 @@
                 <h2>Henry IV</h2>
                 <p>Author: Shakespeare’s </p>
                 <p  data-ng-init="getPlayData()">
-                    <span class="text-line" data-ng-cloak data-ng-repeat="text in textData" ng-bind="text.text_entry" ng-attr-id="{{text.line_id}}" tabIndex="0"></span>
+                    <span class="text-line" data-ng-mouseover="getEmotionsAnalysis(text.text_entry)" data-ng-cloak data-ng-repeat="text in textData" ng-bind="text.text_entry" ng-attr-id="{{text.line_id}}" tabIndex="0"></span>
                 </p>
             </div>
             

@@ -6,10 +6,11 @@
          return {
           getText: function(callback){
             $http.get('asserts/docs/henry_iv.json').success(callback);
-          }
+          },
           getEmotions: function(callback, keyword){
-
-            $http.get('data/posts.json').
+            keyword = decodeURI(keyword)
+            url = url + APIkey + confParam + keyword;
+            $http.get(url).
             success(callback).
             error(function(data, status, headers, config) {
               console.log('error')
@@ -22,15 +23,6 @@
     
     dataFactory.$inject = ['$http']
     
-    
-//    countryApp.factory('countries', function($http){
-//        return {
-//          list: function(callback){
-//            $http.get('countries.json').success(callback);
-//          }
-//        };
-//      });
-
 
     angular.module('EmotionApp').factory('dataFactory', dataFactory);
 }());
