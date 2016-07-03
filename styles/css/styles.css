@@ -194,7 +194,7 @@ main .graphic-container .well .joy img {
 }
 main .graphic-container .well .fear .progress-bar,
 main .graphic-container .well .fear img {
-  background-color: orange;
+  background-color: #FF2500;
 }
 main .graphic-container .well .disgust .progress-bar,
 main .graphic-container .well .disgust img {
